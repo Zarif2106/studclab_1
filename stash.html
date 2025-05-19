@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стажировки - StudClub</title>
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/responsive.css">
+    <style>
+        /* Стили для фильтров */
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .filter-btn {
+            padding: 8px 15px;
+            background-color: var(--light);
+            border: 1px solid var(--light-gray);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        /* Стили для карточек стажировок */
+        .internships-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .internship-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .internship-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .internship-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .internship-title {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+        
+        .internship-company {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .internship-company img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        
+        .internship-details {
+            padding: 20px;
+        }
+        
+        .internship-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            color: var(--gray);
+        }
+        
+        .meta-item i {
+            margin-right: 5px;
+            font-size: 1.1rem;
+        }
+        
+        .internship-description {
+            color: var(--gray);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .internship-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: var(--light);
+        }
+        
+        .internship-deadline {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .btn-apply {
+            padding: 8px 20px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-apply:hover {
+            background-color: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка -->
+     <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">StudClub</a>
+                <ul class="nav-links">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="clubs.html">Кружки</a></li>
+                    <li><a href="stash.html">Стажировки</a></li>
+                    <li><a href="#">Онлайн-курсы</a></li>
+                    <li><a href="https://t.me/marsu_info_bot">Pасписание</a></li>
+                    <li><a href="#">Мероприятия</a></li>
+                    <li><a href="razvlichtnie.html">Развлечения</a></li>
+                    <li><a href="#">Студ газета</a></li>
+                    <li><a href="#" class="btn-login">Войти</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main class="section">
+        <div class="container">
+            <h2 class="section-title">Стажировки для студентов</h2>
+            <p class="section-subtitle">Начните свою карьеру с практического опыта в ведущих компаниях</p>
+            
+            <!-- Фильтры -->
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="it">IT-технологии</button>
+                <button class="filter-btn" data-filter="finance">Финансы</button>
+                <button class="filter-btn" data-filter="marketing">Маркетинг</button>
+                <button class="filter-btn" data-filter="engineering">Инженерия</button>
+                <button class="filter-btn" data-filter="remote">Удалённые</button>
+            </div>
+            
+            <!-- Карточки стажировок -->
+            <div class="internships-grid">
+                <!-- Стажировка 1 -->
+                <div class="internship-card" data-category="it">
+                    <div class="internship-header">
+                        <h3 class="internship-title">Frontend-разработчик</h3>
+                        <div class="internship-company">
+                            <img src="img/companies/techcorp.jpg" alt="TechCorp">
+                            <span>TechCorp</span>
+                        </div>
+                    </div>
+                    <div class="internship-details">
+                        <div class="internship-meta">
+                            <div class="meta-item">
+                                📍 Москва
+                            </div>
+                            <div class="meta-item">
+                                💰 45 000 руб./мес
+                            </div>
+                            <div class="meta-item">
+                                ⏱ Полный день
+                            </div>
+                        </div>
+                        <p class="internship-description">
+                            Разработка пользовательских интерфейсов для корпоративных продуктов. Работа с React, TypeScript и современными фронтенд-технологиями.
+                        </p>
+                    </div>
+                    <div class="internship-footer">
+                        <div class="internship-deadline">
+                            📅 До 15 июня
+                        </div>
+                        <a href="#" class="btn-apply">Откликнуться</a>
+                    </div>
+                </div>
+                
+                <!-- Стажировка 2 -->
+                <div class="internship-card" data-category="finance">
+                    <div class="internship-header">
+                        <h3 class="internship-title">Аналитик данных</h3>
+                        <div class="internship-company">
+                            <img src="img/companies/financegroup.jpg" alt="Finance Group">
+                            <span>Finance Group</span>
+                        </div>
+                    </div>
+                    <div class="internship-details">
+                        <div class="internship-meta">
+                            <div class="meta-item">
+                                📍 Санкт-Петербург
+                            </div>
+                            <div class="meta-item">
+                                💰 40 000 руб./мес
+                            </div>
+                            <div class="meta-item">
+                                ⏱ Гибкий график
+                            </div>
+                        </div>
+                        <p class="internship-description">
+                            Анализ финансовых данных, подготовка отчётов, визуализация данных с помощью Power BI и Tableau.
+                        </p>
+                    </div>
+                    <div class="internship-footer">
+                        <div class="internship-deadline">
+                            📅 До 30 мая
+                        </div>
+                        <a href="#" class="btn-apply">Откликнуться</a>
+                    </div>
+                </div>
+                
+                <!-- Стажировка 3 -->
+                <div class="internship-card" data-category="marketing">
+                    <div class="internship-header">
+                        <h3 class="internship-title">Маркетолог в Digital</h3>
+                        <div class="internship-company">
+                            <img src="img/companies/digitalagency.jpg" alt="Digital Agency">
+                            <span>Digital Agency</span>
+                        </div>
+                    </div>
+                    <div class="internship-details">
+                        <div class="internship-meta">
+                            <div class="meta-item">
+                                📍 Удалённо
+                            </div>
+                            <div class="meta-item">
+                                💰 35 000 руб./мес
+                            </div>
+                            <div class="meta-item">
+                                ⏱ Неполный день
+                            </div>
+                        </div>
+                        <p class="internship-description">
+                            Разработка и реализация digital-стратегий, работа с контентом, анализ эффективности рекламных кампаний.
+                        </p>
+                    </div>
+                    <div class="internship-footer">
+                        <div class="internship-deadline">
+                            📅 До 10 июня
+                        </div>
+                        <a href="#" class="btn-apply">Откликнуться</a>
+                    </div>
+                </div>
+                
+                <!-- Стажировка 4 -->
+                <div class="internship-card" data-category="engineering">
+                    <div class="internship-header">
+                        <h3 class="internship-title">Инженер-конструктор</h3>
+                        <div class="internship-company">
+                            <img src="img/companies/industech.jpg" alt="IndusTech">
+                            <span>IndusTech</span>
+                        </div>
+                    </div>
+                    <div class="internship-details">
+                        <div class="internship-meta">
+                            <div class="meta-item">
+                                📍 Казань
+                            </div>
+                            <div class="meta-item">
+                                💰 50 000 руб./мес
+                            </div>
+                            <div class="meta-item">
+                                ⏱ Полный день
+                            </div>
+                        </div>
+                        <p class="internship-description">
+                            Участие в проектировании промышленного оборудования, работа с CAD-системами (SolidWorks, AutoCAD).
+                        </p>
+                    </div>
+                    <div class="internship-footer">
+                        <div class="internship-deadline">
+                            📅 До 25 мая
+                        </div>
+                        <a href="#" class="btn-apply">Откликнуться</a>
+                    </div>
+                </div>
+                
+                <!-- Стажировка 5 -->
+                <div class="internship-card" data-category="it remote">
+                    <div class="internship-header">
+                        <h3 class="internship-title">Backend-разработчик (Python)</h3>
+                        <div class="internship-company">
+                            <img src="img/companies/devsoft.jpg" alt="DevSoft">
+                            <span>DevSoft</span>
+                        </div>
+                    </div>
+                    <div class="internship-details">
+                        <div class="internship-meta">
+                            <div class="meta-item">
+                                📍 Удалённо
+                            </div>
+                            <div class="meta-item">
+                                💰 55 000 руб./мес
+                            </div>
+                            <div class="meta-item">
+                                ⏱ Гибкий график
+                            </div>
+                        </div>
+                        <p class="internship-description">
+                            Разработка серверной части веб-приложений на Python (Django/Flask), работа с базами данных и API.
+                        </p>
+                    </div>
+                    <div class="internship-footer">
+                        <div class="internship-deadline">
+                            📅 До 20 июня
+                        </div>
+                        <a href="#" class="btn-apply">Откликнуться</a>
+                    </div>
+                </div>
+                
+                <!-- Стажировка 6 -->
+                <div class="internship-card" data-category="finance">
+                    <div class="internship-header">
+                        <h3 class="internship-title">Финансовый аналитик</h3>
+                        <div class="internship-company">
+                            <img src="img/companies/investbank.jpg" alt="InvestBank">
+                            <span>InvestBank</span>
+                        </div>
+                    </div>
+                    <div class="internship-details">
+                        <div class="internship-meta">
+                            <div class="meta-item">
+                                📍 Москва
+                            </div>
+                            <div class="meta-item">
+                                💰 60 000 руб./мес
+                            </div>
+                            <div class="meta-item">
+                                ⏱ Полный день
+                            </div>
+                        </div>
+                        <p class="internship-description">
+                            Анализ финансовых рынков, подготовка инвестиционных рекомендаций, работа с финансовыми моделями.
+                        </p>
+                    </div>
+                    <div class="internship-footer">
+                        <div class="internship-deadline">
+                            📅 До 5 июня
+                        </div>
+                        <a href="#" class="btn-apply">Откликнуться</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>StudClub</h3>
+                    <p>Платформа для объединения студенческих активностей и стажировок.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="clubs.html">Кружки</a></li>
+                        <li><a href="internships.html">Стажировки</a></li>
+                        <li><a href="#">Мероприятия</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Ресурсы</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Как составить резюме</a></li>
+                        <li><a href="#">Советы для собеседований</a></li>
+                        <li><a href="#">Топ компаний для стажировки</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">internships@studclub.ru</a></li>
+                        <li><a href="#">+7 (123) 456-78-91</a></li>
+                        <li><a href="#">Telegram-канал</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 StudClub. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+   <script src="script__js/stash.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/header.css">
+</head>
+<body>
+  <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">StudClub</a>
+                <ul class="nav-links">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="clubs.html">Кружки</a></li>
+                    <li><a href="stash.html">Стажировки</a></li>
+                    <li><a href="#">Онлайн-курсы</a></li>
+                    <li><a href="https://t.me/marsu_info_bot">Pасписание</a></li>
+                    <li><a href="#">Мероприятия</a></li>
+                    <li><a href="razvlichtnie.html">Развлечения</a></li>
+                    <li><a href="#">Студ газета</a></li>
+                    <li><a href="#" class="btn-login">Войти</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="section register-section">
+  <div class="container">
+    <h2 class="section-title">Регистрация</h2>
+    <p class="section-subtitle">Зарегистрируйтесь, чтобы получить доступ ко всем возможностям StudClub.</p>
+
+    <form class="register-form">
+      <div class="form-group">
+        <label for="full-name">Полное имя</label>
+        <input type="text" id="full-name" name="fullName" placeholder="Введите ваше имя" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Введите ваш email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Пароль</label>
+        <input type="password" id="password" name="password" placeholder="Создайте пароль" required />
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password">Подтвердите пароль</label>
+        <input type="password" id="confirm-password" name="confirmPassword" placeholder="Повторите пароль" required />
+      </div>
+
+      <div class="form-group">
+        <label for="university">Ваш ВУЗ</label>
+        <select id="university" name="university" required>
+          <option value="">Выберите ВУЗ</option>
+          <option value="margu">МарГУ</option>
+          <option value="other">Другой</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Зарегистрироваться</button>
+    </form>
+
+    <p class="login-link">
+      Уже есть аккаунт? <a href="#" class="btn-login">Войти</a>
+    </p>
+  </div>
+</section>
+<script src="script__js/forma.js"></script>
+<script src="script__js/script.js"></script>
+</body>
+</html>

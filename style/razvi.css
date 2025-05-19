@@ -1,0 +1,178 @@
+/* Базовые стили */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* --- Видео секция --- */
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* --- Чат --- */
+.chat-box {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.chat-form {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.chat-form input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.chat-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-form button:hover {
+    background-color: #0056b3;
+}
+
+/* --- Шпаргалки --- */
+.upload-form {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.upload-form input[type="file"] {
+    margin: 10px 0;
+}
+
+.upload-form button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cheat-list ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+}
+
+.cheat-list li {
+    margin: 10px 0;
+}
+
+.cheat-list a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.cheat-list a:hover {
+    text-decoration: underline;
+}
+/* --- Никнейм --- */
+.nickname-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nickname-form input {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.nickname-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* --- Чат --- */
+.chat-box {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    height: 400px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    max-width: 70%;
+}
+
+.message.you {
+    align-self: flex-end;
+    background-color: #dcf8c6;
+}
+
+.message.them {
+    align-self: flex-start;
+    background-color: #e5e5ea;
+}
+
+.message span.nick {
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.message span.text {
+    font-size: 15px;
+    word-wrap: break-word;
+}

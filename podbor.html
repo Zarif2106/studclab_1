@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Кружки и секции</title>
+    <link rel="stylesheet" href="style/podbor.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/responsive.css">
+    
+</head>
+<body>
+
+ <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">StudClub</a>
+                <ul class="nav-links">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="clubs.html">Кружки</a></li>
+                    <li><a href="stash.html">Стажировки</a></li>
+                    <li><a href="#">Онлайн-курсы</a></li>
+                    <li><a href="https://t.me/marsu_info_bot">Pасписание</a></li>
+                    <li><a href="#">Мероприятия</a></li>
+                    <li><a href="razvlichtnie.html">Развлечения</a></li>
+                    <li><a href="#">Студ газета</a></li>
+                    <li><a href="#" class="btn-login">Войти</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<!-- Форма фильтров -->
+<div class="filters">
+    <!-- Стоимость -->
+    <label>Стоимость:
+        <input type="range" id="filter-cost" min="0" max="1" value="0" step="1">
+        <div class="slider-labels">
+            <span>Бесплатно</span>
+            <span>Платно</span>
+        </div>
+    </label>
+
+    <!-- Время занятий -->
+    <label>Время занятий:
+        <input type="range" id="filter-time" min="0" max="2" value="0" step="1">
+        <div class="slider-labels">
+            <span>Утро</span>
+            <span>День</span>
+            <span>Вечер</span>
+        </div>
+    </label>
+
+    <!-- Тип активности -->
+    <label>Тип активности:
+        <input type="range" id="filter-type" min="0" max="3" value="0" step="1">
+        <div class="slider-labels">
+            <span>Спорт</span>
+            <span>Наука</span>
+            <span>Волонтёрство</span>
+            <span>Активизм</span>
+        </div>
+    </label>
+</div>
+
+<!-- Все кружки -->
+<div id="clubs-container" class="clubs-grid">
+
+    <!-- Спортивные кружки -->
+    <div class="club-card" data-time="morning" data-cost="free" data-type="sport">
+        <div class="club-image" style="background-image: url('img/beg.jpg');"></div>
+        <div class="club-info">
+            <h3 class="club-title">Клуб бега</h3>
+            <p class="club-description">Присоединяйтесь к нашим утренним пробежкам и улучшайте свою физическую форму.</p>
+            <div class="club-meta">
+                <span>🏃‍♂️ Парк Университета</span>
+                <span>Вт, Чт 7:00</span>
+            </div>
+        </div>
+    </div>
+    <div class="club-card" data-time="day" data-cost="free" data-type="sport">
+        <div class="club-image" style="background-image: url('img/bascetbol.jpg');"></div>
+        <div class="club-info">
+            <h3 class="club-title">Баскетбольная команда</h3>
+            <p class="club-description">Присоединяйтесь к нашей команде и участвуйте в университетских соревнованиях.</p>
+            <div class="club-meta">
+                <span>🏀 Зал №3</span>
+                <span>Пн, Ср 19:00</span>
+            </div>
+        </div>
+    </div>
+    <div class="club-card" data-time="evening" data-cost="free" data-type="sport">
+        <div class="club-image" style="background-image: url('img/futbol.jpg');"></div>
+        <div class="club-info">
+            <h3 class="club-title">Футбольный клуб</h3>
+            <p class="club-description">Тренировки и товарищеские матчи для любителей футбола любого уровня подготовки.</p>
+            <div class="club-meta">
+                <span>🏟 Стадион МAPГУ</span>
+                <span>Вт, Чт 18:00</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Научные кружки -->
+    <div class="club-card" data-time="day" data-cost="free" data-type="science">
+        <div class="club-image" style="background-image: url('img/english.jpg');"></div>
+        <div class="club-info">
+            <h3 class="club-title">Клуб английского языка</h3>
+            <p class="club-description">Говорим свободно, участвуем в конкурсах, создаем будущее вместе!</p>
+            <div class="club-meta">
+                <span>🔧 Лаборатория А-34</span>
+                <span>Пн, Ср 16:00</span>
+            </div>
+        </div>
+    </div>
+    <div class="club-card" data-time="day" data-cost="free" data-type="science">
+        <div class="club-image" style="background-image: url('img/prog.png');"></div>
+        <div class="club-info">
+            <h3 class="club-title">Клуб программирования</h3>
+            <p class="club-description">Создаем будущее, участвуем в соревнованиях и разрабатываем инновационные проекты.</p>
+            <div class="club-meta">
+                <span>🔧 Лаборатория B-304</span>
+                <span>Пн, Пт 16:00</span>
+            </div>
+        </div>
+    </div>
+    <div class="club-card" data-time="day" data-cost="free" data-type="science">
+        <div class="club-image" style="background-image: url('img/robo.jpg');"></div>
+        <div class="club-info">
+            <h3 class="club-title">Клуб робототехники</h3>
+            <p class="club-description">Создаем роботов, участвуем в соревнованиях и разрабатываем инновационные проекты.</p>
+            <div class="club-meta">
+                <span>🔧 Лаборатория B-304</span>
+                <span>Пн, Пт 16:00</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Волонтёрские кружки -->
+    <div class="club-card" data-time="day" data-cost="free" data-type="volunteer">
+        <div class="club-image" style="background-image: url('img/eco.jpg');"></div>
+        <div class="club-info">
+            <h3 class="club-title">ЭкоДвижение</h3>
+            <p class="club-description">Участвуйте в субботниках, экологических акциях и программах переработки отходов.</p>
+            <div class="club-meta">
+                <span>🌳 Городской парк</span>
+                <span>Сб 10:00</span>
+            </div>
+        </div>
+    </div>
+    <div class="club-card" data-time="day" data-cost="free" data-type="volunteer">
+        <div class="club-image" style="background-image: url('img/ddeti.jpg');"></div>
+        <div class="club-info">
+            <h3 class="club-title">Друзья детей</h3>
+            <p class="club-description">Организация досуга для детей из детских домов и помощь в учёбе.</p>
+            <div class="club-meta">
+                <span>🧸 Детский центр</span>
+                <span>Вт, Чт 16:00</span>
+            </div>
+        </div>
+    </div>
+    <div class="club-card" data-time="evening" data-cost="free" data-type="volunteer">
+        <div class="club-image" style="background-image: url('img/deti.jpg');"></div>
+        <div class="club-info">
+            <h3 class="club-title">Добровольческий отряд</h3>
+            <p class="club-description">Организация благотворительных мероприятий и помощь нуждающимся.</p>
+            <div class="club-meta">
+                <span>❤ Аудитория A-105</span>
+                <span>Ср 17:00</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Активистские кружки -->
+    <div class="club-card" data-time="day" data-cost="free" data-type="activist">
+        <div class="club-image" style="background-image: url('img/mol.jpg');"></div>
+        <div class="club-info">
+            <h3 class="club-title">Молодёжный парламент</h3>
+            <p class="club-description">Разработка инициатив для города, участие в молодёжной политике и общественных слушаниях.</p>
+            <div class="club-meta">
+                <span>🏢 Мэрия города</span>
+                <span>Раз в месяц</span>
+            </div>
+        </div>
+    </div>
+    <div class="club-card" data-time="evening" data-cost="free" data-type="activist">
+        <div class="club-image" style="background-image: url('img/deb.jpg');"></div>
+        <div class="club-info">
+            <h3 class="club-title">Клуб дебатов</h3>
+            <p class="club-description">Учитесь аргументированно отстаивать свою позицию на темы политики, общества и культуры.</p>
+            <div class="club-meta">
+                <span>🎤 Аудитория D-202</span>
+                <span>Ср 18:00</span>
+            </div>
+        </div>
+    </div>
+    <div class="club-card" data-time="day" data-cost="free" data-type="activist">
+        <div class="club-image" style="background-image: url('img/gazeta.jpg');"></div>
+        <div class="club-info">
+            <h3 class="club-title">Студенческая газета "Голос"</h3>
+            <p class="club-description">Пишите статьи, снимайте репортажи и ведите соцсети университета.</p>
+            <div class="club-meta">
+                <span>📰 Редакция (корпус Б)</span>
+                <span>Пн, Чт 17:00</span>
+            </div>
+        </div>
+    </div>
+    <div class="club-card" data-time="afternoon" data-cost="free" data-type="activist">
+        <div class="club-image" style="background-image: url('img/studsovet.jpg');"></div>
+        <div class="club-info">
+            <h3 class="club-title">Студенческий совет</h3>
+            <p class="club-description">Участвуйте в управлении университетом и организации студенческой жизни.</p>
+            <div class="club-meta">
+                <span>🏛 Главный корпус</span>
+                <span>Пт 15:00</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>StudClub</h3>
+                <p>Платформа для объединения студенческих активностей и стажировок.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Навигация</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="clubs.html">Кружки</a></li>
+                    <li><a href="#">Стажировки</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Ресурсы</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Партнерам</a></li>
+                    <li><a href="#">Для вузов</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Контакты</h3>
+                <ul class="footer-links">
+                    <li><a href="#">hello@studclub.ru</a></li>
+                    <li><a href="#">+7 (123) 456-78-90</a></li>
+                    <li><a href="#">Соцсети</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 StudClub. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script__js/podbor.js"></script>
+</body>
+</html>
