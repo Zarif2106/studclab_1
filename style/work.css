@@ -1,0 +1,26 @@
+.vacancy-list {
+    padding: 40px 0;
+}
+
+.vacancy-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.vacancy-card h3 {
+    margin-top: 0;
+}
+
+.vacancy-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.vacancy-card a:hover {
+    text-decoration: underline;
+}

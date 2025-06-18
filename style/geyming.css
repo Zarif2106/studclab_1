@@ -1,0 +1,110 @@
+/* --- Слайдер --- */
+.slider-container {
+    position: relative;
+    width: 100%;
+}
+
+.slide {
+    display: none;
+    padding: 100px 0;
+    text-align: center;
+    
+}
+
+.slide h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.slide p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #000;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s ease;
+    user-select: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+}
+
+.next {
+    right: 15px;
+}
+
+.prev {
+    left: 15px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.dots-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active,
+.dot:hover {
+    background-color: #000;
+}
+
+        .gamification-section {
+            background-color: #f9f9f9;
+            padding: 60px 0;
+        }
+
+        .leaderboard-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .leaderboard-table th,
+        .leaderboard-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .leaderboard-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .how-to-earn ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .how-to-earn li {
+            margin: 10px 0;
+        }
+
+        .cta-gamification {
+            margin-top: 30px;
+            text-align: center;
+        }
+   

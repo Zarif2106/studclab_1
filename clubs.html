@@ -20,15 +20,15 @@
             <nav>
                 <a href="#" class="logo">StudClub</a>
                 <ul class="nav-links">
-                    <li><a href="#">Главная</a></li>
+                    <li><a href="index.html">Главная</a></li>
                     <li><a href="clubs.html">Кружки</a></li>
                     <li><a href="stash.html">Стажировки</a></li>
-                    <li><a href="#">Онлайн-курсы</a></li>
+                    <li><a href="curs.html">Онлайн-курсы</a></li>
                     <li><a href="https://t.me/marsu_info_bot">Pасписание</a></li>
                     <li><a href="#">Мероприятия</a></li>
                     <li><a href="razvlichtnie.html">Развлечения</a></li>
-                    <li><a href="#">Студ газета</a></li>
-                    <li><a href="#" class="btn-login">Войти</a></li>
+                    <li><a href="news.html">Студ газета</a></li>
+                    <li><a href="forma.html" class="btn-login">Войти</a></li>
                 </ul>
                 <div class="mobile-menu-btn">
                     <span></span>
@@ -291,6 +291,50 @@
         </div>
     </div>
 </main>
+<!-- Форма добавления кружка -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Создать новый кружок</h2>
+        <form id="clubForm" class="club-form">
+            <div class="form-group">
+                <label for="clubName">Название кружка</label>
+                <input type="text" id="clubName" name="clubName" required />
+            </div>
+
+            <div class="form-group">
+                <label for="clubDescription">Описание кружка</label>
+                <textarea id="clubDescription" name="clubDescription" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="clubType">Выберите тип кружка</label>
+                <select id="clubType" name="clubType" required>
+                    <option value="sport">Спортивный</option>
+                    <option value="science">Научный</option>
+                    <option value="volunteer">Волонтёрский</option>
+                    <option value="activist">Активистский</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="clubLocation">Место проведения</label>
+                <input type="text" id="clubLocation" name="clubLocation" placeholder="например: 🏟 Стадион МАРГУ" required />
+            </div>
+
+            <div class="form-group">
+                <label for="clubTime">Время проведения</label>
+                <input type="text" id="clubTime" name="clubTime" placeholder="например: Вт, Чт 18:00" required />
+            </div>
+
+            <div class="form-group">
+                <label for="clubImage">Ссылка на изображение</label>
+                <input type="url" id="clubImage" name="clubImage" placeholder="https://..."  required />
+            </div>
+
+            <button type="submit" class="btn-submit">Добавить кружок</button>
+        </form>
+    </div>
+</section>
 
 <!-- Подвал -->
 <footer>
@@ -337,33 +381,6 @@
     </div>
 </footer>
 
-<script>
-    // Скрипт для работы вкладок
-    document.addEventListener('DOMContentLoaded', function() {
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                // Удаляем active у всех кнопок и контента
-                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-                
-                // Добавляем active текущей кнопке и соответствующему контенту
-                this.classList.add('active');
-                const tabId = this.getAttribute('data-tab');
-                document.getElementById(tabId).classList.add('active');
-            });
-        });
-        
-        // Мобильное меню (дублируем функционал из script.js)
-        const menuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-        
-        if (menuBtn && navLinks) {
-            menuBtn.addEventListener('click', function() {
-                this.classList.toggle('active');
-                navLinks.classList.toggle('active');
-            });
-        }
-    });
-</script>
+<script src="script__js/clubs.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн-курсы - StudClub</title>
+    
+     <link rel="stylesheet" href="style/curs.css">
+    <link rel="stylesheet" href="style/header.css">
+   <link rel="stylesheet" href="style/responsive.css">
+   <link rel="stylesheet" href="style/main.css">
+    
+    <link rel="stylesheet" href="style/footer.css">
+ 
+</head>
+<body>
+
+    <!-- Шапка -->
+      <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">StudClub</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="clubs.html">Кружки</a></li>
+                    <li><a href="stash.html">Стажировки</a></li>
+                    <li><a href="#">Онлайн-курсы</a></li>
+                    <li><a href="https://t.me/marsu_info_bot">Pасписание</a></li>
+                    <li><a href="#">Мероприятия</a></li>
+                    <li><a href="razvlichtnie.html">Развлечения</a></li>
+                    <li><a href="news.html">Студ газета</a></li>
+                    <li><a href="forma.html" class="btn-login">Войти</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Онлайн-курсы</h1>
+                <p>Выбирай курсы от Яндекс.Практикума или создавай свои и делись знаниями!</p>
+                <a href="#create-course" class="btn btn-primary">Создать свой курс</a>
+            </div>
+        </section>
+
+        <!-- Курсы с Яндекс Практикум -->
+        <section class="course-list">
+            <div class="container">
+                <h2>Популярные курсы с Яндекс.Практикум</h2>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <img src="https://via.placeholder.com/300x150?text=Курс+от+Яндекс" alt="Курс">
+                        <h3>Веб-разработка для новичков</h3>
+                        <p>Научитесь создавать сайты с нуля за 6 месяцев.</p>
+                        <a href="https://practicum.yandex.ru/web/" target="_blank" class="btn btn-outline">Подробнее</a>
+                    </div>
+                    <div class="course-card">
+                        <img src="https://via.placeholder.com/300x150?text=Курс+от+Яндекс" alt="Курс">
+                        <h3>Тестировщик</h3>
+                        <p>Как начать карьеру тестировщика: от теории до практики.</p>
+                        <a href="https://practicum.yandex.ru/tester/" target="_blank" class="btn btn-outline">Подробнее</a>
+                    </div>
+                    <div class="course-card">
+                        <img src="https://via.placeholder.com/300x150?text=Курс+от+Яндекс" alt="Курс">
+                        <h3>Python для начинающих</h3>
+                        <p>Освойте язык программирования Python с самых азов.</p>
+                        <a href="https://practicum.yandex.ru/python/" target="_blank" class="btn btn-outline">Подробнее</a>
+                    </div>
+                    <!-- Другие курсы можно добавить по аналогии -->
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Блок создания курса -->
+        <section class="course-list">
+    <div class="container">
+        <h2>Курсы от Яндекс.Практикум</h2>
+        <div id="yandex-courses" class="courses-grid"></div>
+    </div>
+</section>
+
+<section id="create-course" class="create-course-section">
+    <div class="container">
+        <h2>Создать свой курс</h2>
+        <form id="create-course-form" class="course-form">
+            <input type="text" placeholder="Название курса" required>
+            <textarea placeholder="Описание курса" rows="4" required></textarea>
+            <input type="url" placeholder="Ссылка на материалы (если есть)">
+            <button type="submit" class="btn btn-primary">Опубликовать курс</button>
+        </form>
+    </div>
+</section>
+
+<section class="user-courses">
+    <div class="container">
+        <h2>Пользовательские курсы</h2>
+        <div id="user-courses" class="courses-grid"></div>
+    </div>
+</section>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>StudClub</h3>
+                    <p>Платформа для объединения студенческих активностей и стажировок.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Кружки</a></li>
+                        <li><a href="#">Стажировки</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Ресурсы</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Партнерам</a></li>
+                        <li><a href="#">Для вузов</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">hello@studclub.ru</a></li>
+                        <li><a href="#">+7 (123) 456-78-90</a></li>
+                        <li><a href="#">Соцсети</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 StudClub. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script__js/curs.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudClub - Групповой чат</title>
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/group_chat.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/responsive.css">
+    <link rel="stylesheet" href="style/chat.css">
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">StudClub</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="clubs.html">Кружки</a></li>
+                    <li><a href="stash.html">Стажировки</a></li>
+                    <li><a href="curs.html">Онлайн-курсы</a></li>
+                    <li><a href="https://t.me/marsu_info_bot">Расписание</a></li> 
+                    <li><a href="#">Мероприятия</a></li>
+                    <li><a href="razvlichtnie.html">Развлечения</a></li>
+                    <li><a href="news.html">Студ газета</a></li>
+                    <li><a href="forma.html" class="btn-login">Войти</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main class="group-chat-main">
+        <section class="hero">
+            <div class="container">
+                <h1>Создайте свой групповой чат</h1>
+                <p>Общайтесь со своими одногруппниками или единомышленниками, делитесь новостями, обменивайтесь файлами и работайте над проектами вместе.</p>
+                <div class="hero-buttons">
+                    <a href="#create-group" class="btn btn-primary">Создать чат</a>
+                    <a href="#join-group" class="btn btn-outline">Присоединиться</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Функции чата -->
+        <section class="features-section">
+            <div class="container">
+                <h2 class="section-title">Что можно делать в групповом чате?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💬</div>
+                        <h3>Текстовые сообщения</h3>
+                        <p>Пишите друг другу, добавляйте эмодзи, прикрепляйте изображения и документы.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📷📁</div>
+                        <h3>Обмен файлами</h3>
+                        <p>Загружайте и скачивайте учебные материалы, презентации и другие важные файлы.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📅</div>
+                        <h3>Совместный календарь</h3>
+                        <p>Добавляйте события, встречи, дедлайны и напоминания для всей группы.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎮</div>
+                        <h3>Игра в квесты</h3>
+                        <p>Выполняйте совместные задания и зарабатывайте баллы StudClub как команда!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Создание чата -->
+        <section id="create-group" class="create-group-section">
+            <div class="container">
+                <h2>Создать новый чат</h2>
+                <form class="group-form">
+                    <input type="text" placeholder="Название группы" required>
+                    <textarea placeholder="Описание группы (необязательно)"></textarea>
+                    <button type="submit" class="btn btn-primary">Создать группу</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Присоединение к чату -->
+        <section id="join-group" class="join-group-section">
+            <div class="container">
+                <h2>Присоединиться к существующему чату</h2>
+                <form class="group-form">
+                    <input type="text" placeholder="Введите код или название группы">
+                    <button type="submit" class="btn btn-outline">Присоединиться</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Образец чата -->
+        <section class="chat-preview">
+            <div class="container">
+                <h2>Как выглядит чат</h2>
+                <div class="chat-window">
+                    <div class="chat-message user1">
+                        <strong>Алекс:</strong> Привет! Кто готов к завтрашнему тесту?
+                    </div>
+                    <div class="chat-message user2">
+                        <strong>Марина:</strong> У меня есть конспект, могу скинуть.
+                    </div>
+                    <div class="chat-message user3">
+                        <strong>Иван:</strong> Отлично, спасибо! Давайте соберемся после пар чтобы разобрать сложные вопросы.
+                    </div>
+                    <div class="chat-message system">
+                        <em>Файл "конспект_матан.pdf" загружен Мариной.</em>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Призыв к действию -->
+        <section class="cta">
+            <div class="container">
+                <h2>Начните общаться уже сегодня!</h2>
+                <p>Создайте свою группу или присоединитесь к уже существующей — это бесплатно и удобно.</p>
+                <a href="#create-group" class="btn btn-primary">Создать чат</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>StudClub</h3>
+                    <p>Платформа для объединения студенческих активностей и стажировок.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Кружки</a></li>
+                        <li><a href="#">Стажировки</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Ресурсы</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Партнерам</a></li>
+                        <li><a href="#">Для вузов</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">hello@studclub.ru</a></li>
+                        <li><a href="#">+7 (123) 456-78-90</a></li>
+                        <li><a href="#">Соцсети</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 StudClub. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script__js/group_chat.js"></script>
+</body>
+</html>

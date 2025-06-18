@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Геймификация - StudClub</title>
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/responsive.css">
+    <link rel="stylesheet" href="style/gazeta.css">
+    <!-- Стили для геймификации -->
+    
+</head>
+<body>
+
+<!-- Шапка -->
+<header>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">StudClub</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="clubs.html">Кружки</a></li>
+                <li><a href="stash.html">Стажировки</a></li>
+                <li><a href="curs.html">Онлайн-курсы</a></li>
+                <li><a href="https://t.me/marsu_info_bot">Расписание</a></li> 
+                <li><a href="#">Мероприятия</a></li>
+                <li><a href="razvlichtnie.html">Развлечения</a></li>
+                <li><a href="#">Студ газета</a></li>
+                <li><a href="forma.html" class="btn-login">Войти</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Основное содержимое -->
+<main>
+    <!-- Герой секция -->
+    <!-- Секция Hero со слайдером -->
+<section class="hero">
+    <div class="slider-container">
+        <div class="slide fade">
+            <div class="container">
+                <h1>Студенческая газета</h1>
+                <p>Все самые свежие новости о студенческой жизни</p>
+            </div>
+        </div>
+        <div class="slide fade">
+            <div class="container">
+                <h1>Топ студентов</h1>
+                <p>Соревнуйся с другими участниками StudClub и становись лучшим по количеству набранных баллов.</p>
+            </div>
+        </div>
+        <div class="slide fade">
+            <div class="container">
+                <h1>Баллы = Возможности</h1>
+                <p>Чем больше активности — тем выше уровень, тем ценнее призы: стажировки, подарки, сертификаты и многое другое!</p>
+            </div>
+        </div>
+
+        
+
+    <!-- Индикаторы -->
+    <div class="dots-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</section>
+
+     <section class="container">
+        <div class="news-controls">
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="showTab('all')">Все новости</button>
+                <button class="tab-button" onclick="showTab('external')">Из интернета</button>
+                <button class="tab-button" onclick="showTab('local')">Наши новости</button>
+            </div>
+            <button class="submit-btn" onclick="toggleAddForm()">Добавить новость</button>
+        </div>
+
+        <div id="addNewsForm" class="add-news-form" style="display: none;">
+            <h3>Добавить новость</h3>
+            <form id="newsForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="newsTitle">Заголовок</label>
+                        <input type="text" id="newsTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="newsSource">Источник (сайт)</label>
+                        <input type="text" id="newsSource" value="Наш сайт">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="newsContent">Содержание</label>
+                    <textarea id="newsContent" required></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="newsImage">URL изображения</label>
+                        <input type="text" id="newsImage" placeholder="https://example.com/image.jpg">
+                    </div>
+                    <div class="form-group">
+                        <label for="newsDate">Дата</label>
+                        <input type="date" id="newsDate" required>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Опубликовать</button>
+            </form>
+        </div>
+
+        <div id="news-content" class="news-grid">
+            <div class="loading">Загрузка новостей...</div>
+        </div>
+    </section>
+</main>
+
+<!-- Подвал -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>StudClub</h3>
+                <p>Платформа для объединения студенческих активностей и стажировок.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Навигация</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Кружки</a></li>
+                    <li><a href="#">Стажировки</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Ресурсы</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Партнерам</a></li>
+                    <li><a href="#">Для вузов</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Контакты</h3>
+                <ul class="footer-links">
+                    <li><a href="#">hello@studclub.ru</a></li>
+                    <li><a href="#">+7 (123) 456-78-90</a></li>
+                    <li><a href="#">Соцсети</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 StudClub. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Текущие новости
+    let allNews = [];
+    
+    // Источники новостей о студенческой жизни
+    const newsSources = [
+        {
+            name: "URFU",
+            url: "https://urfu.ru/ru/news/",
+            api: null // В реальности нужно использовать API или парсер
+        },
+        {
+            name: "Gaude",
+            url: "https://gaude.ru/",
+            api: null
+        },
+        {
+            name: "Российское студенчество",
+            url: "https://российское-студенчество.рф/news/",
+            api: null
+        }
+    ];
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Установим сегодняшнюю дату по умолчанию
+        document.getElementById('newsDate').valueAsDate = new Date();
+        
+        // Загрузка новостей
+        loadNews();
+        
+        // Обработчик формы
+        document.getElementById('newsForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            addNews();
+        });
+    });
+
+    // Загрузка новостей
+    async function loadNews() {
+        const newsContainer = document.getElementById('news-content');
+        newsContainer.innerHTML = '<div class="loading">Загрузка новостей...</div>';
+        
+        try {
+            // Загрузка локальных новостей
+            const localNews = JSON.parse(localStorage.getItem('studentNews')) || [];
+            
+            // Загрузка внешних новостей (в реальности - запросы к API)
+            // Здесь используем моковые данные, так как у большинства сайтов нет публичного API
+            const externalNews = await fetchExternalNews();
+            
+            // Объединяем новости
+            allNews = [...localNews, ...externalNews];
+            
+            // Отображаем
+            displayNews(allNews);
+        } catch (error) {
+            console.error('Ошибка загрузки новостей:', error);
+            newsContainer.innerHTML = '<div class="loading">Ошибка загрузки новостей. Пожалуйста, попробуйте позже.</div>';
+        }
+    }
+
+    // Загрузка внешних новостей (моковые данные)
+    async function fetchExternalNews() {
+        // В реальном приложении здесь должны быть запросы к API новостных сайтов
+        // или парсинг их RSS-лент
+        
+        return [
+            {
+                title: "В УрФУ стартовал новый учебный год",
+                content: "В Уральском федеральном университете прошли торжественные линейки для первокурсников.",
+                source: "URFU",
+                date: "2023-09-01",
+                image: "https://urfu.ru/upload/medialibrary/8f3/1.jpg"
+            },
+            {
+                title: "Студенческий фестиваль Gaudeamus",
+                content: "В Москве прошел ежегодный фестиваль студенческого творчества Gaudeamus.",
+                source: "Gaude",
+                date: "2023-08-15",
+                image: "https://gaude.ru/images/festival2023.jpg"
+            },
+            {
+                title: "Новые стипендии для студентов",
+                content: "Правительство объявило о новых стипендиальных программах для талантливых студентов.",
+                source: "Российское студенчество",
+                date: "2023-08-20",
+                image: "https://xn----8sbalvbaflsekh7l.xn--p1ai/images/news1.jpg"
+            }
+        ];
+    }
+
+    // Отображение новостей
+    function displayNews(news) {
+        const newsContainer = document.getElementById('news-content');
+        
+        if (news.length === 0) {
+            newsContainer.innerHTML = '<div class="loading">Новостей пока нет. Будьте первым!</div>';
+            return;
+        }
+        
+        let html = '';
+        
+        news.forEach((item, index) => {
+            const isLocal = item.source === 'Наш сайт';
+            
+            html += `
+                <div class="news-item" data-source="${isLocal ? 'local' : 'external'}">
+                    ${isLocal ? `<button class="delete-btn" onclick="deleteNews(${index})">×</button>` : ''}
+                    ${item.image ? `<img src="${item.image}" alt="${item.title}" class="news-image">` : ''}
+                    <div class="news-content">
+                        <span class="news-source">${item.source}</span>
+                        <h3>${item.title}</h3>
+                        <p>${item.content}</p>
+                        <p class="news-date">${item.date}</p>
+                    </div>
+                </div>
+            `;
+        });
+        
+        newsContainer.innerHTML = html;
+    }
+
+    // Добавление новости
+    function addNews() {
+        const title = document.getElementById('newsTitle').value;
+        const content = document.getElementById('newsContent').value;
+        const source = document.getElementById('newsSource').value;
+        const image = document.getElementById('newsImage').value;
+        const date = document.getElementById('newsDate').value;
+        
+        const newNews = {
+            title: title,
+            content: content,
+            source: source,
+            image: image || 'https://via.placeholder.com/400x200?text=StudClub',
+            date: date
+        };
+        
+        // Добавляем в локальное хранилище
+        const currentNews = JSON.parse(localStorage.getItem('studentNews')) || [];
+        currentNews.unshift(newNews);
+        localStorage.setItem('studentNews', JSON.stringify(currentNews));
+        
+        // Обновляем отображение
+        loadNews();
+        
+        // Скрываем форму и очищаем
+        document.getElementById('addNewsForm').style.display = 'none';
+        document.getElementById('newsForm').reset();
+    }
+
+    // Удаление новости
+    function deleteNews(index) {
+        const currentNews = JSON.parse(localStorage.getItem('studentNews')) || [];
+        
+        if (index >= 0 && index < currentNews.length) {
+            currentNews.splice(index, 1);
+            localStorage.setItem('studentNews', JSON.stringify(currentNews));
+            loadNews();
+        }
+    }
+
+    // Переключение вкладок
+    function showTab(source) {
+        const newsItems = document.querySelectorAll('.news-item');
+        
+        newsItems.forEach(item => {
+            if (source === 'all') {
+                item.style.display = 'block';
+            } else {
+                item.style.display = item.dataset.source === source ? 'block' : 'none';
+            }
+        });
+        
+        // Обновляем активные кнопки
+        document.querySelectorAll('.tab-button').forEach(btn => {
+            btn.classList.toggle('active', btn.textContent.toLowerCase().includes(source));
+        });
+    }
+
+    // Показать/скрыть форму добавления
+    function toggleAddForm() {
+        const form = document.getElementById('addNewsForm');
+        form.style.display = form.style.display === 'none' ? 'block' : 'none';
+    }
+    
+</script>
+<script src="script__js/geyming.js"></script>
+
+</body>
+</html>

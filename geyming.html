@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Геймификация - StudClub</title>
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/responsive.css">
+    <link rel="stylesheet" href="style/geyming.css">
+    <!-- Стили для геймификации -->
+    
+</head>
+<body>
+
+<!-- Шапка -->
+<header>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">StudClub</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="clubs.html">Кружки</a></li>
+                <li><a href="stash.html">Стажировки</a></li>
+                <li><a href="#">Онлайн-курсы</a></li>
+                <li><a href="https://t.me/marsu_info_bot">Расписание</a></li> 
+                <li><a href="#">Мероприятия</a></li>
+                <li><a href="razvlichtnie.html">Развлечения</a></li>
+                <li><a href="news.html">Студ газета</a></li>
+                <li><a href="forma.html" class="btn-login">Войти</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Основное содержимое -->
+<main>
+    <!-- Герой секция -->
+    <!-- Секция Hero со слайдером -->
+<section class="hero">
+    <div class="slider-container">
+        <div class="slide fade">
+            <div class="container">
+                <h1>Геймификация</h1>
+                <p>Зарабатывай баллы за активность, участвуй в кружках и мероприятиях, поднимайся в рейтинге и получай награды!</p>
+            </div>
+        </div>
+        <div class="slide fade">
+            <div class="container">
+                <h1>Топ студентов</h1>
+                <p>Соревнуйся с другими участниками StudClub и становись лучшим по количеству набранных баллов.</p>
+            </div>
+        </div>
+        <div class="slide fade">
+            <div class="container">
+                <h1>Баллы = Возможности</h1>
+                <p>Чем больше активности — тем выше уровень, тем ценнее призы: стажировки, подарки, сертификаты и многое другое!</p>
+            </div>
+        </div>
+
+        
+
+    <!-- Индикаторы -->
+    <div class="dots-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</section>
+
+    <!-- Таблица лидеров -->
+    <section class="gamification-section">
+        <div class="container">
+            <h2 class="section-title">Топ студентов</h2>
+            <p class="section-subtitle">Показываем самых активных участников StudClub</p>
+
+            <table class="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Место</th>
+                        <th>Имя студента</th>
+                        <th>Баллы</th>
+                        <th>Уровень</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Алексей Иванов</td>
+                        <td>5600</td>
+                        <td>Level 23</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Мария Петрова</td>
+                        <td>4950</td>
+                        <td>Level 21</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Дмитрий Смирнов</td>
+                        <td>4100</td>
+                        <td>Level 19</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Как заработать баллы -->
+            <div class="how-to-earn">
+                <h3>Как заработать баллы?</h3>
+                <ul>
+                    <li>✔️ За регистрацию — +10 баллов</li>
+                    <li>🎯 За участие в мероприятии — +50 баллов</li>
+                    <li>🎓 За посещение кружка — +30 баллов в неделю</li>
+                    <li>🏆 За победу в конкурсе — +200 баллов</li>
+                    <li>🔥 За ежедневную активность — +10 баллов</li>
+                </ul>
+            </div>
+
+            <!-- Призыв к действию -->
+            <div class="cta-gamification">
+                <p>Хочешь попасть в топ? Прими участие в любом кружке или мероприятии прямо сейчас!</p>
+                <a href="forma.html" class="btn btn-primary">Зарегистрироваться</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Подвал -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>StudClub</h3>
+                <p>Платформа для объединения студенческих активностей и стажировок.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Навигация</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Кружки</a></li>
+                    <li><a href="#">Стажировки</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Ресурсы</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Партнерам</a></li>
+                    <li><a href="#">Для вузов</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Контакты</h3>
+                <ul class="footer-links">
+                    <li><a href="#">hello@studclub.ru</a></li>
+                    <li><a href="#">+7 (123) 456-78-90</a></li>
+                    <li><a href="#">Соцсети</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 StudClub. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script__js/geyming.js"></script>
+
+</body>
+</html>
